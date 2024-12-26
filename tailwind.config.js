@@ -12,10 +12,13 @@ module.exports = {
     extend: {
       colors: {
         primary: '#FF6500',
+        hColor: '#14b8a6',
         secondary: '#64748b',
-        cardlight: '#B4B4B3',
+        secondarylight: '#2D3250',
+        cardlight: '#F3F0CA',
+        carddark: '#1e293b',
         dark: '#0f172a',
-        light: '#F4F6FF'
+        light: '#FFE5B4'
       },
       screens: {
         '2xl': '1320px',
