@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
@@ -10,47 +10,49 @@
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('dark');R
+      document.documentElement.classList.remove('dark');
     }
   </script>
 </head>
 
 <body class="bg-light dark:bg-dark">
   <!-- Header Start -->
-  <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent">
+  <header class="absolute top-0 left-0 z-10 flex items-center w-full bg-transparent">
     <div class="container">
       <div class="relative flex items-center justify-between">
         <div class="px-4">
-          <a href="#home" class="block py-6 text-lg lg:text-xl font-bold text-primary">ichsanalam</a>
+          <a href="#home" class="block py-6 text-lg font-bold lg:text-2xl text-primary">ichsanalam</a>
         </div>
         <div class="flex items-center px-4">
-          <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
-            <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
-            <span class="hamburger-line transition duration-300 ease-in-out"></span>
-            <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+          <button id="hamburger" name="hamburger" type="button" class="absolute block right-4 lg:hidden">
+            <span class="transition duration-300 ease-in-out origin-top-left hamburger-line"></span>
+            <span class="transition duration-300 ease-in-out hamburger-line"></span>
+            <span class="transition duration-300 ease-in-out origin-bottom-left hamburger-line"></span>
           </button>
 
-          <nav id="nav-menu" class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent">
+          <nav id="nav-menu"
+            class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent">
             <ul class="block lg:flex">
               <li class="group">
                 <a href="#home"
-                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Home</a>
+                  class="flex py-2 mx-8 text-base lg:text-lg text-dark group-hover:text-primary dark:text-white">Home</a>
               </li>
               <li class="group">
-                <a href="#portfolio"
-                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Project</a>
+                <a href="#project"
+                  class="flex py-2 mx-8 text-base lg:text-lg text-dark group-hover:text-primary dark:text-white">Project</a>
               </li>
               <li class="group">
                 <a href="#contact"
-                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Contact</a>
+                  class="flex py-2 mx-8 text-base lg:text-lg text-dark group-hover:text-primary dark:text-white">Contact</a>
               </li>
-              <li class="mt-3 flex items-center pl-8 lg:mt-0">
+              <!-- darkmode toggle -->
+              <li class="flex items-center pl-8 mt-3 lg:mt-0">
                 <div class="flex">
                   <span class="mr-2 text-sm text-slate-500">light</span>
                   <input type="checkbox" class="hidden" id="dark-toggle" />
                   <label for="dark-toggle">
-                    <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
-                      <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out">
+                    <div class="flex items-center h-5 p-1 rounded-full cursor-pointer w-9 bg-slate-500">
+                      <div class="w-4 h-4 transition duration-300 ease-in-out bg-white rounded-full toggle-circle">
                       </div>
                     </div>
                   </label>
@@ -66,202 +68,212 @@
   <!-- Header End -->
 
   <!-- Aboutme Section Start -->
-  <section id="home" class="pt-28 lg:pt-44 lg:pb-20">
+  <section id="home" class="pt-28 lg:pt-36 lg:pb-20">
     <div class="container">
       <div class="flex justify-center">
-        <h1 class="text-primary text-4xl lg:text-5xl font-bold">About me</h1>
+        <h1 class="text-4xl font-bold text-primary lg:text-5xl lg:pb-10">About me</h1>
       </div>
       <div class="flex flex-wrap">
-        <div class="w-full self-end mb-10 lg:w-1/2">
+        <div class="self-end w-full mb-10 lg:w-1/2">
           <div class="relative lg:right-0">
             <img src="img/ichsan.png" alt="Ichsan Alam Fadillah"
               class="relative mx-auto w-[250px] max-w-[400px] lg:max-w-[340px]" />
           </div>
         </div>
-        <div class="w-full self-center px-4 lg:w-1/2 ">
-          <h1 class="text-base font-semibold text-[#028391] md:text-xl">Hello, my name is <span
-              class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl">Ichsan Alam Fadillah</span>
+        <div class="self-center w-full px-4 lg:w-1/2 ">
+          <h1 class="text-lg font-bold text-hColor md:text-xl">👋 Hi there! My name is <span
+              class="block mt-1 text-2xl font-bold text-dark dark:text-white lg:text-xl">Ichsan Alam Fadillah</span>
           </h1>
-          <p class="font-medium leading-relaxed text-secondary">
+          <p class="font-medium leading-relaxed text-secondarylight dark:text-secondary">
             I am a recent Informatics graduate with a strong passion for network engineering, IT support, and website
             development. I am eager to apply my knowledge to deliver impactful solutions and contribute to the growth of
             the company while continuously enhancing my technical and professional skills.
           </p>
           <!-- Start Logo Sosmed Section -->
           <div class="flex items-center mt-5 mb-5">
-            <!-- Youtube -->
-            <a href="https://youtube.com/webprogrammingunpas" target="_blank"
-              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            <!-- Github -->
+            <a href="https://github.com/ichsanalam" target="_blank"
+              class="flex items-center justify-center mr-3 border rounded-full h-9 w-9 border-secondarylight dark:border-slate-300 text-secondarylight dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
               <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <title>YouTube</title>
+                <title>GitHub</title>
                 <path
-                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
               </svg>
             </a>
-
-            <!-- Instagram -->
-            <a href="https://instagram.com/sandhikagalih" target="_blank"
-              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
-              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <title>Instagram</title>
-                <path
-                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
-              </svg>
-            </a>
-
             <!-- LinkedIn -->
-            <a href="https://linkedin.com/in/sandhikagalih" target="_blank"
-              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            <a href="https://www.linkedin.com/in/ichsan-alam-fadillah/" target="_blank"
+              class="flex items-center justify-center mr-3 border rounded-full h-9 w-9 border-secondarylight dark:border-slate-300 text-secondarylight dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
               <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>LinkedIn</title>
                 <path
                   d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
               </svg>
             </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/ichsanalam" target="_blank"
+              class="flex items-center justify-center mr-3 border rounded-full h-9 w-9 border-secondarylight dark:border-slate-300 text-secondarylight dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Instagram</title>
+                <path
+                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+              </svg>
+            </a>
+            <!-- Gmail -->
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ichsanalamf@gmail.com" target="_blank"
+              class="flex items-center justify-center mr-3 border rounded-full h-9 w-9 border-secondarylight dark:border-slate-300 text-secondarylight dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Gmail</title>
+                <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+              </svg>
+            </a>
           </div>
-          <!-- End Logo Sosmed Section -->
         </div>
+        <!-- End Logo Sosmed Section -->
       </div>
+    </div>
     </div>
     </div>
   </section>
   <!-- Aboutme Section End -->
 
-<!-- Skills Section Start -->
-<section id="skills" class="mt-16">
-  <div class="container">
-    <div class="px-4">
-      <h1 class="text-4xl lg:text-5xl font-bold text-primary pb-5 text-center">Skills</h1>
-      <!-- Skill list -->
-      <div
-      x-data="{}"
-      x-init="$nextTick(() => {
+  <!-- Skills Section Start -->
+  <section id="skills" class="mt-32">
+    <div class="container">
+      <div class="px-4">
+        <h1 class="pb-5 text-4xl font-bold text-center lg:text-5xl text-primary">Skills</h1>
+        <!-- Skill list -->
+        <div x-data="{}" x-init="$nextTick(() => {
           let ul = $refs.logos;
           ul.insertAdjacentHTML('afterend', ul.outerHTML);
           ul.nextSibling.setAttribute('aria-hidden', 'true');
       })"
-      class="mt-4 w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
-  >
-      <ul x-ref="logos" class="flex items-center justify-center md:justify-center [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
-        <li class="flex flex-col items-center justify-center">
-          <img src="./img/svg/HTML.svg" alt="HTML" class="h-20" />
-          <p class="text-base font-semibold text-orange-500 mt-2">HTML</p>
-        </li>
-        <li class="flex flex-col items-center justify-center">
-          <img src="./img/svg/css.svg" alt="CSS" class="h-20" />
-          <p class="text-base font-semibold text-blue-500 mt-2">CSS</p>
-        </li>
-        <li class="flex flex-col items-center justify-center">
-          <img src="./img/svg/tailwind.svg" alt="Tailwind" class="h-20" />
-          <p class="text-base font-semibold text-sky-400 mt-2">Tailwind</p>
-        </li>
-        <li class="flex flex-col items-center justify-center">
-          <img src="./img/svg/bootstrap.svg" alt="Bootstrap" class="h-20" />
-          <p class="text-base font-semibold text-purple-500 mt-2">Bootstrap</p>
-        </li>
-        <li class="flex flex-col items-center justify-center">
-          <img src="./img/svg/php.svg" alt="PHP" class="h-20" />
-          <p class="text-base font-semibold text-blue-800 mt-2">PHP</p>
-        </li>
-        <li class="flex flex-col items-center justify-center">
-          <img src="./img/svg/javascript.svg" alt="JavaScript" class="h-20" />
-          <p class="text-base font-semibold text-yellow-500 mt-2">JavaScript</p>
-        </li>
-        <li class="flex flex-col items-center justify-center">
-          <img src="./img/svg/python.svg" alt="Python" class="h-20" />
-          <p class="text-base font-semibold text-teal-500 mt-2">Python</p>
-        </li>
-      </ul>      
-      <ul x-ref="logos" class="flex items-center justify-center md:justify-center [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
-        <li class="flex flex-col items-center justify-center">
-          <img src="./img/svg/HTML.svg" alt="HTML" class="h-20" />
-          <p class="text-base font-semibold text-orange-500 mt-2">HTML</p>
-        </li>
-        <li class="flex flex-col items-center justify-center">
-          <img src="./img/svg/css.svg" alt="CSS" class="h-20" />
-          <p class="text-base font-semibold text-blue-500 mt-2">CSS</p>
-        </li>
-        <li class="flex flex-col items-center justify-center">
-          <img src="./img/svg/tailwind.svg" alt="Tailwind" class="h-20" />
-          <p class="text-base font-semibold text-sky-400 mt-2">Tailwind</p>
-        </li>
-        <li class="flex flex-col items-center justify-center">
-          <img src="./img/svg/bootstrap.svg" alt="Bootstrap" class="h-20" />
-          <p class="text-base font-semibold text-purple-500 mt-2">Bootstrap</p>
-        </li>
-        <li class="flex flex-col items-center justify-center">
-          <img src="./img/svg/php.svg" alt="PHP" class="h-20" />
-          <p class="text-base font-semibold text-blue-800 mt-2">PHP</p>
-        </li>
-        <li class="flex flex-col items-center justify-center">
-          <img src="./img/svg/javascript.svg" alt="JavaScript" class="h-20" />
-          <p class="text-base font-semibold text-yellow-500 mt-2">JavaScript</p>
-        </li>
-        <li class="flex flex-col items-center justify-center">
-          <img src="./img/svg/python.svg" alt="Python" class="h-20" />
-          <p class="text-base font-semibold text-teal-500 mt-2">Python</p>
-        </li>
-      </ul>               
-  </div>
-       <!-- end skill list -->
+          class="mt-4 w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_32px,_black_calc(100%-32px),transparent_100%)]">
+          <ul x-ref="logos"
+            class="flex items-center justify-center md:justify-center [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+            <li class="flex flex-col items-center justify-center">
+              <img src="./img/svg/HTML.svg" alt="HTML" class="h-20" />
+              <p class="mt-2 text-base font-semibold text-orange-500">HTML</p>
+            </li>
+            <li class="flex flex-col items-center justify-center">
+              <img src="./img/svg/css.svg" alt="CSS" class="h-20" />
+              <p class="mt-2 text-base font-semibold text-blue-500">CSS</p>
+            </li>
+            <li class="flex flex-col items-center justify-center">
+              <img src="./img/svg/tailwind.svg" alt="Tailwind" class="h-20" />
+              <p class="mt-2 text-base font-semibold text-sky-400">Tailwind</p>
+            </li>
+            <li class="flex flex-col items-center justify-center">
+              <img src="./img/svg/bootstrap.svg" alt="Bootstrap" class="h-20" />
+              <p class="mt-2 text-base font-semibold text-purple-500">Bootstrap</p>
+            </li>
+            <li class="flex flex-col items-center justify-center">
+              <img src="./img/svg/php.svg" alt="PHP" class="h-20" />
+              <p class="mt-2 text-base font-semibold text-blue-800">PHP</p>
+            </li>
+            <li class="flex flex-col items-center justify-center">
+              <img src="./img/svg/javascript.svg" alt="JavaScript" class="h-20" />
+              <p class="mt-2 text-base font-semibold text-yellow-500">JavaScript</p>
+            </li>
+            <li class="flex flex-col items-center justify-center">
+              <img src="./img/svg/python.svg" alt="Python" class="h-20" />
+              <p class="mt-2 text-base font-semibold text-teal-500">Python</p>
+            </li>
+          </ul>
+          <ul x-ref="logos"
+            class="flex items-center justify-center md:justify-center [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+            <li class="flex flex-col items-center justify-center">
+              <img src="./img/svg/HTML.svg" alt="HTML" class="h-20" />
+              <p class="mt-2 text-base font-semibold text-orange-500">HTML</p>
+            </li>
+            <li class="flex flex-col items-center justify-center">
+              <img src="./img/svg/css.svg" alt="CSS" class="h-20" />
+              <p class="mt-2 text-base font-semibold text-blue-500">CSS</p>
+            </li>
+            <li class="flex flex-col items-center justify-center">
+              <img src="./img/svg/tailwind.svg" alt="Tailwind" class="h-20" />
+              <p class="mt-2 text-base font-semibold text-sky-400">Tailwind</p>
+            </li>
+            <li class="flex flex-col items-center justify-center">
+              <img src="./img/svg/bootstrap.svg" alt="Bootstrap" class="h-20" />
+              <p class="mt-2 text-base font-semibold text-purple-500">Bootstrap</p>
+            </li>
+            <li class="flex flex-col items-center justify-center">
+              <img src="./img/svg/php.svg" alt="PHP" class="h-20" />
+              <p class="mt-2 text-base font-semibold text-blue-800">PHP</p>
+            </li>
+            <li class="flex flex-col items-center justify-center">
+              <img src="./img/svg/javascript.svg" alt="JavaScript" class="h-20" />
+              <p class="mt-2 text-base font-semibold text-yellow-500">JavaScript</p>
+            </li>
+            <li class="flex flex-col items-center justify-center">
+              <img src="./img/svg/python.svg" alt="Python" class="h-20" />
+              <p class="mt-2 text-base font-semibold text-teal-500">Python</p>
+            </li>
+          </ul>
+        </div>
+        <!-- end skill list -->
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
-  <!-- Portfolio Section Start -->
-  <section id="portfolio" class="mt-36">
+  <!-- Project Section Start -->
+  <section id="project" class="pt-20 mt-16">
     <div class="container">
       <div class="w-full px-4">
-        <div class="mx-auto mb-8 max-w-xl text-center">
-          <h2 class="mb-4 font-bold text-primary text-4xl lg:text-5xl">Project</h2>
+        <div class="max-w-xl mx-auto mb-8 text-center">
+          <h2 class="mb-4 text-4xl font-bold text-primary lg:text-5xl">Project</h2>
         </div>
       </div>
       <!-- Start Project List -->
-      <div class="container mx-auto px-4">
+      <div class="container px-4 mx-auto">
         <div class="flex flex-wrap">
           <!-- Card 1 -->
-          <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-6">
-            <div class="bg-cardlight rounded-lg shadow-md overflow-hidden">
-              <img src="img/project/pregnant.jpg" alt="Card Image" class="w-full h-[250px] object-cover">
+          <div class="w-full px-4 mb-6 sm:w-1/2 lg:w-1/3">
+            <div class="overflow-hidden rounded-lg shadow-xl bg-cardlight dark:bg-carddark">
+              <img src="img/project/nutripregnantbot.png" alt="Card Image" class="w-full h-[250px] object-cover">
               <div class="p-4">
-                <h2 class="text-xl font-semibold text-[#FF5F00]">NutriPregnantBot</h2>
-                <p class="mt-2 text-secondary line-clamp-4">
-                  NutriPregnantBot is a food menu recommendation system for pregnant women, developed using ontology and SWRL rules. The system utilizes a Telegram chatbot to connect users with the recommender system.
+                <h2 class="text-xl font-semibold dark:text-white">NutriPregnantBot</h2>
+                <p class="mt-2 text-base text-secondarylight dark:text-secondary line-clamp-4">
+                  NutriPregnantBot is a Telegram bot designed to assist pregnant women in providing food menu recommendations that align with their preferences and nutritional needs. This chatbot is created using Python and ontology. Ontology is used to structure and organize knowledge about types of food, nutritional content, and user preferences to provide food recommendations that meet the user's needs.
                 </p>
-                <a href="https://github.com/ichsanalam/NutripregnantBot" class="inline-block mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                <a href="https://github.com/ichsanalam/NutripregnantBot"
+                  class="inline-block px-4 py-2 mt-4 text-white bg-blue-500 rounded hover:bg-blue-600">
                   Check Project
                 </a>
               </div>
             </div>
           </div>
           <!-- Card 2 -->
-          <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-6">
-            <div class="bg-cardlight rounded-lg shadow-md overflow-hidden">
-              <img src="img/project/bike.jpg" alt="Card Image" class="w-full h-[250px] object-cover">
+          <div class="w-full px-4 mb-6 sm:w-1/2 lg:w-1/3">
+            <div class="overflow-hidden rounded-lg shadow-xl bg-cardlight dark:bg-carddark">
+              <img src="img/project/bike.png" alt="Card Image" class="w-full h-[250px] object-cover">
               <div class="p-4">
-                <h2 class="text-xl font-semibold text-[#FF5F00]">Bike Sharing</h2>
-                <p class="mt-2 text-secondary line-clamp-4">
-                  This is a long description of the card content. It contains more text than the card can display in three lines. 
-                  The extra text will not be shown, and instead, we will see an ellipsis...read more.
+                <h2 class="text-xl font-semibold dark:text-white">Bike Sharing</h2>
+                <p class="mt-2 text-base text-secondarylight dark:text-secondary line-clamp-4">
+                  Bike Sharing Data Analysis is a final project from Dicoding to analyze bike sharing trends using the Python programming language.
                 </p>
-                <a href="https://github.com/ichsanalam/analisis-data-bike-sharing" class="inline-block mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                <a href="https://github.com/ichsanalam/analisis-data-bike-sharing"
+                  class="inline-block px-4 py-2 mt-4 text-white bg-blue-500 rounded hover:bg-blue-600">
                   Check Project
                 </a>
               </div>
             </div>
           </div>
           <!-- Card 3 -->
-          <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-6">
-            <div class="bg-cardlight rounded-lg shadow-md overflow-hidden">
+          <div class="w-full px-4 mb-6 sm:w-1/2 lg:w-1/3">
+            <div class="overflow-hidden rounded-lg shadow-xl bg-cardlight dark:bg-carddark">
               <img src="img/project/bookapi.png" alt="Card Image" class="w-full h-[250px] object-cover">
               <div class="p-4">
-                <h2 class="text-xl font-semibold text-[#FF5F00]">Bookshelf API</h2>
-                <p class="mt-2 text-secondary line-clamp-4">
-                  A back-end API developed for a note-taking application, implementing the core functionalities of Create, Read, Update, and Delete (CRUD). This API is built using Hapi.js, a powerful and flexible Node.js framework that enables fast development of RESTful services.
+                <h2 class="text-xl font-semibold dark:text-white">Bookshelf API</h2>
+                <p class="mt-2 text-base text-secondarylight dark:text-secondary line-clamp-4">
+                  A back-end API developed for a note-taking application, implementing the core functionalities of
+                  Create, Read, Update, and Delete (CRUD). This API is built using Hapi.js, a powerful and flexible
+                  Node.js framework that enables fast development of RESTful services.
                 </p>
-                <a href="https://github.com/ichsanalam/Bookshelf-API-Dicoding" class="inline-block mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                <a href="https://github.com/ichsanalam/Bookshelf-API-Dicoding"
+                  class="inline-block px-4 py-2 mt-4 text-white bg-blue-500 rounded hover:bg-blue-600">
                   Check Project
                 </a>
               </div>
@@ -272,17 +284,97 @@
       <!-- End Project List -->
     </div>
   </section>
-  
   <!-- Portfolio Section End -->
+
+  <!-- Start Contact Section -->
+  <section id="contact" class="pt-20 mt-16 mb-40">
+    <div class="container">
+      <div class="px-4">
+        <h1 class="pb-5 text-4xl font-bold text-center lg:text-5xl text-primary">Contact Me Here</h1>
+        <!-- Contact List -->
+        <div class="flex items-center justify-center mt-5 mb-5">
+          <!-- Github -->
+          <a href="https://github.com/ichsanalam" target="_blank"
+            class="flex items-center justify-center w-12 h-12 mr-3 border rounded-full lg:mr-11 lg:h-16 lg:w-16 border-secondarylight dark:border-slate-300 text-secondarylight dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            <svg role="img" class="fill-current w-7 h-7 lg:w-11 lg:h-11" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <title>GitHub</title>
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/ichsan-alam-fadillah/" target="_blank"
+            class="flex items-center justify-center w-12 h-12 mr-3 border rounded-full lg:mr-11 lg:h-16 lg:w-16 border-secondarylight dark:border-slate-300 text-secondarylight dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            <svg role="img" class="fill-current w-7 h-7 lg:w-9 lg:h-9" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <title>LinkedIn</title>
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/ichsanalam" target="_blank"
+            class="flex items-center justify-center w-12 h-12 mr-3 border rounded-full lg:mr-11 lg:h-16 lg:w-16 border-secondarylight dark:border-slate-300 text-secondarylight dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            <svg role="img" class="fill-current w-7 h-7 lg:w-10 lg:h-10" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <title>Instagram</title>
+              <path
+                d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+            </svg>
+          </a>
+          <!-- Gmail -->
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ichsanalamf@gmail.com" target="_blank"
+            class="flex items-center justify-center w-12 h-12 mr-3 border rounded-full lg:mr-11 lg:h-16 lg:w-16 border-secondarylight dark:border-slate-300 text-secondarylight dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            <svg role="img" class="fill-current w-7 h-7 lg:w-10 lg:h-10" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <title>Gmail</title>
+              <path
+                d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+            </svg>
+          </a>
+        </div>
+        <!-- Address -->
+        <div class="flex items-center justify-center pt-4">
+          <a href="#"
+            class="flex items-center justify-center w-6 h-6 mr-2 border rounded-full lg:mr-4 lg:h-10 lg:w-10 border-secondarylight dark:border-slate-300 text-secondarylight dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            <svg role="img" class="w-4 h-4 fill-current lg:w-5 lg:h-5" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <title>Google Maps</title>
+              <path
+                d="M19.527 4.799c1.212 2.608.937 5.678-.405 8.173-1.101 2.047-2.744 3.74-4.098 5.614-.619.858-1.244 1.75-1.669 2.727-.141.325-.263.658-.383.992-.121.333-.224.673-.34 1.008-.109.314-.236.684-.627.687h-.007c-.466-.001-.579-.53-.695-.887-.284-.874-.581-1.713-1.019-2.525-.51-.944-1.145-1.817-1.79-2.671L19.527 4.799zM8.545 7.705l-3.959 4.707c.724 1.54 1.821 2.863 2.871 4.18.247.31.494.622.737.936l4.984-5.925-.029.01c-1.741.601-3.691-.291-4.392-1.987a3.377 3.377 0 0 1-.209-.716c-.063-.437-.077-.761-.004-1.198l.001-.007zM5.492 3.149l-.003.004c-1.947 2.466-2.281 5.88-1.117 8.77l4.785-5.689-.058-.05-3.607-3.035zM14.661.436l-3.838 4.563a.295.295 0 0 1 .027-.01c1.6-.551 3.403.15 4.22 1.626.176.319.323.683.377 1.045.068.446.085.773.012 1.22l-.003.016 3.836-4.561A8.382 8.382 0 0 0 14.67.439l-.009-.003zM9.466 5.868L14.162.285l-.047-.012A8.31 8.31 0 0 0 11.986 0a8.439 8.439 0 0 0-6.169 2.766l-.016.018 3.665 3.084z" />
+            </svg>
+          </a>
+          <p class="text-sm text-secondarylight sm:text-center dark:text-gray-400">South Tangerang, Banten, Indonesia
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
 
 
   <!-- Back to top Start -->
   <a href="#home"
     class="fixed bottom-4 right-4 z-[9999] hidden h-14 w-14 items-center justify-center rounded-full bg-primary p-4 hover:animate-pulse"
     id="to-top">
-    <span class="mt-2 block h-5 w-5 rotate-45 border-t-2 border-l-2"></span>
+    <span class="block w-5 h-5 mt-2 rotate-45 border-t-2 border-l-2"></span>
   </a>
   <!-- Back to top End -->
+
+  <!-- Start Footer -->
+  <footer id="footer" class="">
+    <div class="container">
+      <div class="p-4">
+        <div class="flex items-center justify-center">
+          <span class="text-sm text-gray-800 sm:text-center dark:text-gray-400">© 2024 <a href="#"
+              class="hover:underline">Ichsan Alam Fadillah</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Fotter -->
 
   <script src="script.js"></script>
 </body>

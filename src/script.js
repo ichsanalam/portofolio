@@ -36,6 +36,23 @@ window.addEventListener('click', function (e) {
 const darkToggle = document.querySelector('#dark-toggle');
 const html = document.querySelector('html');
 
+if (localStorage.getItem('theme') === null) {
+  document.documentElement.classList.add('dark');
+  localStorage.setItem('theme', 'dark');
+  document.getElementById('dark-toggle').checked = true;
+}
+
+// Event listener untuk toggle mode gelap
+document.getElementById('dark-toggle').addEventListener('change', function () {
+  if (this.checked) {
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  }
+});
+
 darkToggle.addEventListener('click', function () {
   if (darkToggle.checked) {
     html.classList.add('dark');
@@ -53,16 +70,7 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
   darkToggle.checked = false;
 }
 
-// const skillsContainer = document.getElementById('skillsContainer');
-// const skillsAnimation = document.getElementById('skillsAnimation');
-
-// const cloneSkills = () => {
-//   const clone = skillsAnimation.cloneNode(true); // Clone the animation row
-//   skillsContainer.appendChild(clone); // Append it within the same flex container
-  
-//   // Pastikan animasi pada clone memiliki kecepatan yang sama
-//   clone.classList.add('animate-scroll');
-// };
-
-// cloneSkills();
-
+document.getElementById("to-top").addEventListener("click", function (e) {
+  e.preventDefault(); // Mencegah perilaku default
+  document.querySelector("#home").scrollIntoView({ behavior: "smooth" }); // Scroll ke elemen dengan id "home"
+});
