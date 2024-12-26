@@ -2,7 +2,7 @@ const { transform } = require('sucrase');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./public/**/*.{html,js}"],
   darkMode: 'class',
   theme: {
     container: {
